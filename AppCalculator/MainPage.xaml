@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCalculator.MainPage"
+             BackgroundColor="#021302">
+
+    <AbsoluteLayout>
+        <StackLayout  AbsoluteLayout.LayoutBounds="0,0,1,.32" AbsoluteLayout.LayoutFlags="All"
+                      Padding="24,0" Spacing="0" HorizontalOptions="End" VerticalOptions="End">
+
+            <Label Padding="8,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span x:Name="spnFirts" Text="" FontSize="36" TextColor="White"/>
+                            <Span x:Name="spnSecond" Text="" FontSize="32" TextColor="#d86d6f"/>
+                            <Span x:Name="spnThird" Text="" FontSize="36" TextColor="White"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label x:Name="lblNumber" HorizontalOptions="End" Text="" TextColor="White" Margin="0,0,0,16" FontSize="84" FontAttributes="Bold"/>
+        </StackLayout>
+
+        <Frame AbsoluteLayout.LayoutBounds="0,1,1,.1" AbsoluteLayout.LayoutFlags="SizeProportional, YProportional" BackgroundColor="#0A290A"/>
+
+        <Frame AbsoluteLayout.LayoutBounds="0,1,1,.62" AbsoluteLayout.LayoutFlags="SizeProportional, YProportional" BackgroundColor="#0A290A" HasShadow="False" CornerRadius="45">
+
+            <Grid AbsoluteLayout.LayoutBounds="0,1,1,.62" AbsoluteLayout.LayoutFlags="SizeProportional,YProportional"
+                  RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*,*,*" Padding="10" RowSpacing="4" ColumnSpacing="4">
+                <Frame Grid.Column="0" Grid.Row="0" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="#37ae9a" FontSize="38" VerticalOptions="Fill" Text="+" BackgroundColor="#07190A" Clicked="Btn_sumar"/>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="0" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="#37ae9a" Padding="4,0,0,4" FontSize="38" VerticalOptions="Fill" Text="-" BackgroundColor="#07190A" Clicked="Btn_restar"/>
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="0" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="#37ae9a" Padding="2,0,0,8" FontSize="38" VerticalOptions="Fill" Text="×" BackgroundColor="#07190A" Clicked="Btn_producto"/>
+                </Frame>
+                <Frame Grid.Column="3" Grid.Row="0" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="#37ae9a" FontSize="38" VerticalOptions="Fill" Text="÷" BackgroundColor="#07190A" Clicked="Btn_division"/>
+                </Frame>
+
+                <Frame Grid.Column="0" Grid.Row="1" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="28" VerticalOptions="Fill" Text="7" BackgroundColor="#07190A" Clicked="Btn_num7"/>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="1" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="28" VerticalOptions="Fill" Text="8" BackgroundColor="#07190A" Clicked="Btn_num8"/>
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="1" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="28" VerticalOptions="Fill" Text="9" BackgroundColor="#07190A" Clicked="Btn_num9"/>
+                </Frame>
+                <Frame Grid.Column="3" Grid.Row="1" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="#d86d6f" FontSize="28" VerticalOptions="Fill" Text="AC" BackgroundColor="#07190A" Clicked="Btn_AC"/>
+                </Frame>
+
+                <Frame Grid.Column="0" Grid.Row="2" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="28" VerticalOptions="Fill" Text="4" BackgroundColor="#07190A" Clicked="Btn_num4"/>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="2" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="28" VerticalOptions="Fill" Text="5" BackgroundColor="#07190A" Clicked="Btn_num5"/>
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="2" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="28" VerticalOptions="Fill" Text="6" BackgroundColor="#07190A" Clicked="Btn_num6"/>
+                </Frame>
+                <Frame Grid.Column="3" Grid.Row="2" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="#d86d6f" FontSize="28" VerticalOptions="Fill" Text="C" BackgroundColor="#07190A" Clicked="Btn_C"/>
+                </Frame>
+
+                <Frame Grid.Column="0" Grid.Row="3" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="28" VerticalOptions="Fill" Text="1" BackgroundColor="#07190A" Clicked="Btn_num1"/>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="3" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="28" VerticalOptions="Fill" Text="2" BackgroundColor="#07190A" Clicked="Btn_num2"/>
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="3" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="28" VerticalOptions="Fill" Text="3" BackgroundColor="#07190A" Clicked="Btn_num3"/>
+                </Frame>
+                <Frame Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="28" VerticalOptions="Fill" Text="=" BackgroundColor="#d86d6f" Clicked="Btn_Result"/>
+                </Frame>
+
+
+                <Frame Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="38" VerticalOptions="Fill" Text="0" BackgroundColor="#07190A" Clicked="Btn_num0"/>
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="4" Padding="0" CornerRadius="12" BackgroundColor="#282b33">
+                    <Button TextColor="White" FontSize="36" VerticalOptions="Fill" Text="." BackgroundColor="#07190A" Clicked="Btn_point"/>
+                </Frame>
+            </Grid>
+
+        </Frame>
+    </AbsoluteLayout>
+        
+
+</ContentPage>
